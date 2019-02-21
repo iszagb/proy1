@@ -31,3 +31,7 @@ Route::get('/bienvenida/{nombre}/{apellido?}', function($nombre, $apellido = nul
       'nombre_completo' => $nombre . ' ' . $apellido
     ]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
